@@ -35,6 +35,10 @@ void swap(Process* first, Process* second){
     *second = temp;
 }
 
+int max(int a, int b) {
+    return a > b ? a : b;
+}
+
 int main() {
     int processes_number;
     printf("Enter the number of processes: ");
@@ -74,9 +78,9 @@ int main() {
 //    printf("%d %d %d\processes_number", results_list[0].waiting_time, results_list[0].turn_around_time, results_list[0].completion_time);
 
     for (int i = 1; i < processes_number; ++i) {
-        int completion_time = results_list[i - 1].completion_time + processes_list[i].burst_time;
+        int completion_time = max(results_list[i - 1].completion_time, processes_list[i].arrival_time) + processes_list[i].burst_time;
         int turn_around_time = completion_time - processes_list[i].arrival_time;
-        int waiting_time = turn_around_time - processes_list[i].burst_time;
+        int waiting_time = max(turn_around_time - processes_list[i].burst_time, 0);
 
         results_list[i].waiting_time =  waiting_time;
         results_list[i].turn_around_time =  turn_around_time;
