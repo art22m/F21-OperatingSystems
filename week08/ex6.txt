@@ -1,0 +1,5 @@
+8KB = 8192bit = 2^(13) bit => 13 bits for the offset
+So to encode the number of page frame there available 16-13 = 3bits.
+That means, for a single-level linear page table needed 2^3 = 8 entries.
+
+Answer: 8 entries

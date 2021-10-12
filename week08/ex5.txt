@@ -1,0 +1,2 @@
+The physical address points to the real layout of RAM.
+Virtual addresses refer to the virtual store viewed by the process. At the execution time, virtual addresses are mapped to the physical addresses by MMU. 
