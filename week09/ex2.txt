@@ -1,0 +1,7 @@
+Number of hits will be minimal when we request not used frame:
+0, 1, 2, 3, 4, 5, 6
+Output: 0/7
+
+Number of hits will be maximum when we request the existent frame every time.
+0, 0, 0, 0, 0, 0, 0
+Output: 6/1
