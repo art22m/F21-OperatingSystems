@@ -1,0 +1,15 @@
+There are three strategies: recovery, prevention and avoidance
+Recovery: 
+ - This strategy tends to kill the process, which may not be the applicable 
+   for some processes. Also we should save bookmarks for rollbacks. Thus, this 
+   is not the best choice.
+   
+Prevention:
+ - This strategy works in case of the following conditions: mutual exclusion, 
+   hold and wait, no preemption, and circular wait. The main problem is that 
+   there will be problems with parallelism.
+   
+Avoidance: 
+ - This strategy works fine if there are exist information about the needed 
+   resources. In this case, the system is able to decide whether resource is 
+   safe or not. 
